@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <ul id="dataUL">
+    <li>AAAAA</li>
+    <li>BBBBB</li>
+    <li>CCCCC</li>
+    <div>DDDDD</div>
+  </ul>
+</body>
+
+<script src="/dist/xgao-utils.js"></script>
+<script>
+
+// 使用代理方式，绑定li的click事件，动态添加的li也能触发
+xUtils.addEventListener('#dataUL','click',function(e){
+  console.log(this.innerHTML);
+},'li');
+
+</script>
+  
+</html>

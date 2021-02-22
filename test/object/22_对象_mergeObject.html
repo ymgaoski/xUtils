@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="/dist/xgao-utils.js"></script>
+<script>
+
+  let a = {
+    name: 'xgao',
+    desc: 'a'
+  }
+
+  let b = {
+    age: 28,
+    desc: 'b'
+  }
+
+  // 对象合并，当有属性冲突时，后面的不覆盖前面的属性
+  let c = xUtils.mergeObject(a,b);
+  console.log(c);
+
+
+</script>
+
+<body>
+</body>
+</html>

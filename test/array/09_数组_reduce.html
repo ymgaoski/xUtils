@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="/dist/xgao-utils.js"></script>
+<script>
+
+  var array = [1,2,3,4,5];
+
+  // 数组汇总
+  // total 上次返回的值
+  // item 当前值
+  // index 当前索引
+  // 10： 初始值，如果不设置默认是把数组第一个值当成初始值，遍历就是从第2个开始，有的话就是从第1个开始遍历
+  // let result = array.reduce(function(total,item,index){
+  //   console.log(total,item,index);
+  //   return total + item;
+  // },10)
+  // console.log(result,'result');
+
+
+  let result2 = xUtils.reduce(array,function(total,item,index){
+    console.log(total,item,index);
+    return total + item;
+  })
+  console.log('result2 => ',result2);
+
+  let result3 = xUtils.reduce(array,function(total,item,index){
+    console.log(total,item,index);
+    return total + item;
+  },10)
+  console.log('result3 => ',result3);
+</script>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="/dist/xgao-utils.js"></script>
+<script>
+
+  var array = ['a','b','你','好','啊','f'];
+
+  // 数组切片，截取从指定开始索引(包括该索引)到指定结束索引(不包括该索引，空 表示数组最后一位索引)的数据，返回新数组
+  let result = array.slice(2,4);
+  console.log('result => ', result);
+
+  let result2 = array.slice(2,-1);
+  console.log('result2 => ', result2);
+
+
+
+  let result3 = xUtils.slice(array,2,4);
+  console.log('result3 => ',result3);
+  
+  let result4 = xUtils.slice(array,2,-1);
+  console.log('result4 => ',result4);
+
+</script>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "xgao-utils",
+  "version": "1.0.2",
+  "description": "JS常用工具库",
+  "main": "./dist/xgao-utils.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build:watch": "webpack --watch",
+    "publish": "npm publish --registry=https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "js",
+    "utils",
+    "lib",
+    "web",
+    "xgao",
+    "xgao-utitls",
+    "array",
+    "object",
+    "function",
+    "string",
+    "event-bus",
+    "ajax"
+  ],
+  "author": "ywengao@qq.com",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0"
+  }
+}

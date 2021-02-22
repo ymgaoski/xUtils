@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="/dist/xgao-utils.js"></script>
+<script>
+
+  // 对象
+  function Person(){
+
+  }
+
+  // 判断一个对象是否是指定对象实例
+  let p1 = new Person();
+  console.log(p1 instanceof Person);
+
+  Object.apply
+  // 自定义方法
+  console.log(xUtils.myInstanceOf(p1,Person));
+
+  console.log(xUtils.myInstanceOf(p1,Object));
+</script>
+
+<body>
+</body>
+</html>

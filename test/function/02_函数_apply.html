@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script src="/dist/xgao-utils.js"></script>
+<script>
+  // 全局变量
+  var c = 100;
+
+  // 对象
+  let person = {
+    c: 1
+  }
+
+  // 函数
+  function add(x,y){
+    console.log(this);
+    return x + y + this.c;
+  }
+
+  // 方式一
+  let result = xUtils.apply(add,person,[1,2]);
+  // => 4
+  console.log(result,'result');
+
+  // 方式二
+  result = xUtils.apply(add,null,[1,2]);
+  // => 103
+  console.log(result,'result2');
+</script>
+<body>
+  
+</body>
+</html>

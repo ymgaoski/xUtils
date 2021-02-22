@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="/dist/xgao-utils.js"></script>
+<script>
+
+  let person = {
+    name: 'xgao',
+    age: 18,
+    parent: {
+      clazz: '405'
+    },
+    likes: ['吃饭','睡觉','打球']
+  }
+
+  // 浅拷贝
+  let newPerson = xUtils.clone(person);
+
+  // 修改新对象的值
+  newPerson.name = 'kucool';
+  newPerson.age = 29;
+  // 对象为引用类型，修改会影响原对象中的数据
+  newPerson.parent.clazz = '999';
+  // 数组也是引用类型（数组是对象）
+  newPerson.likes.push('吹水');
+
+  console.log('person => ',person);
+  console.log('newPerson => ',newPerson);
+
+</script>
+
+<body>
+</body>
+</html>

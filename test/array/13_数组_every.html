@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="/dist/xgao-utils.js"></script>
+<script>
+
+  var array = [1,2,3,4,5];
+
+  // 只有当数组中的所有元素都满足指定条件，才返回 true，否则返回 false
+  let result = array.every(item => {
+    return item < 10;
+  })
+  console.log('result => ', result);
+
+
+  let result2 = xUtils.every(array,item => {
+    return item < 10;
+  })
+  console.log('result2 => ',result2);
+  
+</script>
+
+<body>
+</body>
+</html>

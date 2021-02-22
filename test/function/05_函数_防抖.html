@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="/dist/xgao-utils.js"></script>
+<script>
+  
+  window.onload = function(){
+    this.initEvent();
+  }
+
+  function initEvent(){
+    // 获取元素
+    const searchInput = document.getElementById('search');
+    // 添加change事件
+    searchInput.onkeydown = xUtils.debounce(function(e){
+      console.log(e,'change');
+    },1000)
+  }
+  
+</script>
+<body>
+  <input type="text" id="search" />
+</body>
+</html>

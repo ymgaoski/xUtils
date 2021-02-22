@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="/dist/xgao-utils.js"></script>
+<script>
+
+  let person = {
+    name: 'xgao',
+    age: 18,
+    parent: {
+      clazz: '405'
+    },
+    likes: ['吃饭','睡觉','打球'],
+    say: function(){
+      console.log(`hello ${this.name}`);
+    }
+  }
+
+  // 循环引用
+  person.parent.like = person.likes;
+  person.likes.push(person.parent);
+
+  // 深拷贝，所有引用类型的值也会复制一份，互不影响
+  let newPerson = xUtils.deepClone(person);
+  
+  // 第三种没有解决循环引用，会导致内存溢出
+  // let newPerson = deepClone3(person);
+
+  // 修改新对象的值
+  newPerson.name = 'kucool';
+  newPerson.age = 29;
+  newPerson.parent.clazz = '999';
+  newPerson.likes.push('吹水');
+
+  console.log('person => ',person);
+  console.log('newPerson => ',newPerson);
+
+  // 使用JSON转换方式进行的拷贝，拷贝不了对象中的 function,同样不能解决循环引用问题
+  // let newPerson2 = deepClone3(person);
+  // console.log('newPerson2 => ',newPerson2);
+
+</script>
+
+<body>
+</body>
+</html>
