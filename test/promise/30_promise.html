@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="promise_class.js"></script>
+<!-- <script src="promise.js"></script> -->
+
+<!-- Promise对象 -->
+<script>
+
+let p = new Promise((resolve,reject) => {
+  resolve('good');
+  // reject('no');
+  
+  setTimeout(() => {
+    // resolve('good');
+    // reject('no');
+  }, 1000);
+  
+  // console.log('111');
+  // throw '错了';
+  // console.log('222');
+});
+
+// 回调1
+let res = p.then(value => {
+  console.log(value,'111');
+  
+  return new Promise((resolve,reject) => {
+    setTimeout(() => {
+      reject('ko no');
+    }, 2000);
+  });
+});
+
+// 回调2
+p.then(value => {
+  console.log(value,'222');
+},
+// error => {
+//   console.log(error,'then error2');
+// }
+).then(value => {
+  console.log(value,'333');
+}).then(value => {
+  console.log(value,'444');
+}).catch(value => {
+  console.log(value,'catch error');
+});
+
+console.log('代码准备完成..');
+
+console.log(res,'res');
+
+// console.log(p,'p');
+
+</script>
+
+<body>
+</body>
+</html>

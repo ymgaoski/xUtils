@@ -11,6 +11,14 @@
 console.log(xUtils);
 console.log(xUtils.reverseString('12345'));
 
+const p = new xUtils.Promise((resolve,reject) => {
+  resolve('ok');
+}).then(data => {
+  console.log(data,'then');
+})
+
+console.log(p);
+
 </script>
 <body>
   

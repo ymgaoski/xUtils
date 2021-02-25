@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="promise_class.js"></script>
+<!-- <script src="promise.js"></script> -->
+
+<!-- Promise.resolve -->
+<script>
+  // 传普通值
+  const result = Promise.resolve(123);
+  console.log(result);
+
+  // 不传值
+  const result2 = Promise.resolve();
+  console.log(result2);
+
+  // 传Promise对象
+  const result3 = Promise.resolve(
+    new Promise((reslove,reject) => {
+      // reslove('ok');
+
+      setTimeout(() => {
+        reject('no');
+      }, 2000);
+    })
+  );
+  console.log(result3);
+</script>
+<body>
+</body>
+</html>

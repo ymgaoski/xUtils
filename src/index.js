@@ -35,3 +35,8 @@ export {reverseString,loopString,truncate} from './string/index'
 
 // ajax相关的 API 函数
 export {ajax} from './ajax/index'
+
+// Promise相关的 API 函数
+// require('./promise/index')
+
+export {Promise} from './promise/index'

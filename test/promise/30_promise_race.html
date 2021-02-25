@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<script src="promise_class.js"></script>
+<!-- <script src="promise.js"></script> -->
+
+<!-- Promise.race -->
+<script>
+
+const p1 = new Promise((resolve,reject) => {
+  setTimeout(() => {
+    resolve('111');
+  }, 2);
+})
+const p2 = new Promise((resolve,reject) => {
+  setTimeout(() => {
+    resolve('222');
+  }, 0);
+})
+const p3 = new Promise((resolve,reject) => {
+  setTimeout(() => {
+    resolve('333');
+  }, 1);
+})
+
+const result = Promise.race([p1,p2,p3]);
+console.log(result);
+
+result.then(value => {
+  console.log(value,'第一名产生！');
+},error => {
+  console.log(error,'出错也是第一名！');
+})
+
+</script>
+
+<body>
+</body>
+</html>
