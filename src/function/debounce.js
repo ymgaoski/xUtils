@@ -1,9 +1,9 @@
 /**
  * 防抖，当一个函数在不断执行时，在指定间隔内，只有最后一次生效
  * @param {回调函数} fn 
- * @param {等待间隔} wait 
+ * @param {等待间隔，默认1000毫秒} wait 
  */
-export function debounce(fn,wait){
+export function debounce(fn,wait=1000){
   let timeId;
 
   return function(e){

@@ -1,9 +1,9 @@
 /**
- * 函数节流，实现在连续触发下，只在指定时间间隔内触发
+ * 节流，实现在连续触发下，只在指定时间间隔内触发
  * @param {回调函数} fn 
- * @param {最小执行间隔} interval 
+ * @param {最小执行间隔，默认1000毫秒} interval 
  */
-export function throttle(fn,interval){
+export function throttle(fn,interval=1000){
   // 记录上次点击的时间
   let start = 0;
 
